@@ -43,18 +43,18 @@ public abstract class ImageDownloadTarget extends SimpleTarget<File> implements
     @Override
     public void onLoadCleared(Drawable placeholder) {
         super.onLoadCleared(placeholder);
-        GlideProgressSupport.forget(mUrl);
+        //GlideProgressSupport.forget(mUrl);
     }
 
     @Override
     public void onLoadStarted(Drawable placeholder) {
         super.onLoadStarted(placeholder);
-        GlideProgressSupport.expect(mUrl, this);
+       // GlideProgressSupport.expect(mUrl, this);
     }
 
     @Override
     public void onLoadFailed(Exception e, Drawable errorDrawable) {
         super.onLoadFailed(e, errorDrawable);
-        GlideProgressSupport.forget(mUrl);
+        //GlideProgressSupport.forget(mUrl);
     }
 }
